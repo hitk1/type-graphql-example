@@ -1,0 +1,17 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "logging": true,
+    "synchronize": true,
+    "username": "postgres",
+    "password": "rpi1234",
+    "database": "graphql-example",
+    "entities": [ "./src/modules/**/entity/*.ts" ],
+    "migrations": [ "./src/infra/typeorm/migrations/*.ts" ],
+    "subscribers": [ "./src/infra/typeorm/subscribers/*.ts" ],
+    "cli": {
+        "migrationsDir": "./src/shared/infra/typeorm/migrations/",
+        "entitiesDir": "./src/modules/**/entity/"
+    }
+}
